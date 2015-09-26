@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/footer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/pay"
+                android:layout_weight="1"
+                android:text="Pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button android:id="@+id/kot_send_print"
+            android:layout_weight="1"
+            android:text="KOT Send &amp; Print"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/buttonsPan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000111"
+            android:orientation="horizontal">
+
+            <TextView
+                android:padding="10dp"
+                android:background="#cccccc"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="@string/current_order"
+                android:id="@+id/cur_order_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_margin="1dp"
+                android:background="#cccccc"
+                android:text="@string/items_selected_review"
+                android:layout_weight="1"
+                android:id="@+id/cur_order_itm_cnt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/payNowBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ExpandableListView android:id="@+id/order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:groupIndicator="@null"
+        android:layout_above="@id/footer"/>
+
+</RelativeLayout>

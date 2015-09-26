@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:id="@+id/row1"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:text="Amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/amount"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:id="@+id/row2"
+        android:layout_below="@id/row1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/discount"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_below="@id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#010101"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:id="@+id/row3"
+        android:layout_below="@id/line"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="Total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/total"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Spinner
+        android:padding="10dp"
+        android:layout_below="@id/row3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/payment_types">
+
+    </Spinner>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/review"
+            android:text="Review Order"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/proceed"
+            android:text="Proceed"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

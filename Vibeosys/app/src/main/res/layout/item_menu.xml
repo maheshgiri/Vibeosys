@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <com.vibeosys.framework.ui.riv.view.RemoteImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/menu_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="5dp"/>
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/menu_name"
+        android:layout_toRightOf="@id/menu_icon" />
+
+    <TextView
+        android:layout_toRightOf="@id/menu_icon"
+        android:layout_below="@id/menu_name"
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tags"
+        style="@style/tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/rightPan"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            style="@style/sp_button"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/minus"
+            android:id="@+id/decrease"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:padding="10dp"
+            android:text="0"
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            style="@style/sp_button"
+            android:padding="5dp"
+            android:src="@drawable/plus"
+            android:id="@+id/increase"
+            android:scaleType="centerInside"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/rightPan"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/comment"
+        android:id="@+id/editBtn"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
